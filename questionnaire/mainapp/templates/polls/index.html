@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{#{% block menu %}<li><a href="{% url "article-add" %}">Создать статью</a></li>{% endblock menu %}#}
+
+{% block title %}Все опросы{% endblock title %}
+
+{% block page_header %}Все опросы{% endblock page_header %}
+
+{% block content %}
+    {% if not polls %}
+        <h2>НЕТ Опросов</h2>
+    {% endif %}
+
+    {% for poll in polls %}
+        <p><a href="">{{ poll.question }}</a></p>
+    {% endfor %}
+    {% include 'partial/paginate.html' %}
+{% endblock content %}
