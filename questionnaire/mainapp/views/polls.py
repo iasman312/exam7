@@ -1,4 +1,4 @@
-from django.views.generic import ListView, DetailView, CreateView
+from django.views.generic import ListView, DetailView, CreateView, UpdateView
 from django.urls import reverse, reverse_lazy
 from mainapp.models import Poll
 from mainapp.forms import PollForm
@@ -23,3 +23,13 @@ class CreatePollView(CreateView):
     form_class = PollForm
     model = Poll
     success_url = reverse_lazy('poll-list')
+
+
+class PollUpdateView(UpdateView):
+    form_class = PollForm
+    model = Poll
+    template_name = 'polls/update.html'
+    context_object_name = 'poll'
+
+    def get_success_url(self):
+        return reverse('poll-view', kwargs={'pk': self.kwargs.get('pk')})
