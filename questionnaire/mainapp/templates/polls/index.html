@@ -12,7 +12,7 @@
     {% endif %}
 
     {% for poll in polls %}
-        <p><a href="">{{ poll.question }}</a></p>
+        <p><a href="{% url "poll-view" poll.id %}">{{ poll.question }}</a></p>
     {% endfor %}
     {% include 'partial/paginate.html' %}
 {% endblock content %}
