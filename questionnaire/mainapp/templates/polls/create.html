@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block page_header %}Добавить опрос{% endblock page_header %}
+
+{% block content %}
+    <form action="{% url "poll-add" %}" method="post">
+        {% include "partial/form.html" with button_text="Создать опрос" %}
+    </form>
+{% endblock content %}
