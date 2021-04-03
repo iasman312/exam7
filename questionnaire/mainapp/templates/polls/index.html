@@ -20,6 +20,7 @@
             <blockquote class="blockquote mb-0">
               <p>{{ poll.question }}</p>
                 <a href="{% url "poll-view" poll.id %}"><footer class="blockquote-footer">Просмотр...</footer></a>
+                <a href="{% url "answer" poll.id %}">Пройти опрос</a>
             </blockquote>
           </div>
         </div>
