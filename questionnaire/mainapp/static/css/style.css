@@ -2,6 +2,12 @@ body {
     margin-top: 60px;
 }
 
+.body {
+    background-image: url("../images/42.jpg");
+    background-repeat: no-repeat, repeat;
+    background-color: #cccccc;
+}
+
 .container{
     width: 80%;
     margin: 0 auto;

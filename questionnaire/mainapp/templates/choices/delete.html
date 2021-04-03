@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %}Подтвердите удаление варианта{% endblock %}
+{% block page_header %}Вы уверены, что хотите удалить вариант?{% endblock page_header %}
+
+{% block content%}
+    <form action="{% url "poll-choices-delete" choice.id %}", method="POST">
+        {% include 'partial/form.html' with button_text="Да, я хочу удалить вариант" %}
+        <a href="{% url "poll-view" choice.poll.id %}">Отмена. Код красный. КОД КРАСНЫЙ!!</a>
+    </form>
+{% endblock content %}

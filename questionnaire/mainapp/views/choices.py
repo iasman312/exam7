@@ -1,5 +1,7 @@
-from django.views.generic import CreateView, UpdateView
-from django.shortcuts import reverse, get_object_or_404
+from django.views.generic import CreateView, UpdateView, DeleteView
+from django.shortcuts import get_object_or_404
+from django.urls import reverse, reverse_lazy
+
 
 from mainapp.forms import ChoiceForm
 from mainapp.models import Choice, Poll
@@ -30,3 +32,12 @@ class PollChoicesUpdate(UpdateView):
 
     def get_success_url(self):
         return reverse('poll-view', kwargs={'pk': self.kwargs.get('pk')})
+
+
+class PollChoicesDelete(DeleteView):
+    model = Choice
+    template_name = 'choices/delete.html'
+    context_object_name = 'choice'
+
+    def get_success_url(self):
+        return reverse('poll-view', kwargs={'pk': self.object.poll.pk})

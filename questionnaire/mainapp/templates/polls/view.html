@@ -10,12 +10,41 @@
 {% block page_header %}Опрос {{ poll.id }}{% endblock page_header %}
 
 {% block content %}
-    <p>Title: {{ poll.question }}</p>
-
-    <h2>Choices:</h2>
-    {% for choice in poll.choices.all %}
-        <p>{{ choice.choice }}</p>
-    {% empty %}
-        <p>Нет вариантов :(</p>
-    {% endfor %}
+    <div class="card w-50 mx-auto">
+      <div class="card-body">
+        <h5 class="card-title">{{ poll.question }}</h5>
+        <p class="card-text">{{ poll.created_at }}</p>
+        <a class="h2" href="{% url "poll-update" poll.id %}"><i class="far
+        fa-edit"></i></a>
+        <a class="h2" href="{% url "poll-delete" poll.id %}"><i class="far
+        fa-trash-alt"></i></a>
+      </div>
+    </div>
+    <div class="mx-auto w-50 mt-3">
+        <div class="card">
+          <div class="card-header">
+            Варианты
+          </div>
+          <ul class="list-group list-group-flush">
+            {% for choice in poll.choices.all %}
+                <li class="list-group-item">{{ choice.choice }} <a
+                        href="{% url "poll-choices-update" choice.id %}"><i
+                        class="far
+                         fa-edit"></i></a>
+                    <a href="{% url "poll-choices-delete" choice.id %}"><i
+                            class="far
+                    fa-trash-alt"></i></a></li>
+            {% empty %}
+                <p>Нет вариантов :(</p>
+            {% endfor %}
+          </ul>
+        </div>
+    </div>
+    <div class="col text-center mt-3">
+        <a href="{% url "poll-choices-add" poll.id %}" class="btn
+    btn-primary btn-lg
+    active "
+       role="button"
+       aria-pressed="true">Добавить вариант</a>
+    </div>
 {% endblock content %}
