@@ -21,3 +21,13 @@ class Choice(models.Model):
         return self.choice
 
 
+class Answer(models.Model):
+    poll = models.ForeignKey('mainapp.Poll', on_delete=models.CASCADE,
+                             related_name='answers', verbose_name='Ответ',
+                             null=False, blank=False)
+    choice = models.ForeignKey('mainapp.Choice', on_delete=models.CASCADE,
+                               related_name='answers', verbose_name='Ответ',
+                               null=False, blank=False)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+
