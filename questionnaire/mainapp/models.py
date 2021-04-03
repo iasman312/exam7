@@ -6,6 +6,9 @@ class Poll(models.Model):
                                 verbose_name='Вопрос')
     created_at = models.DateTimeField(auto_now_add=True)
 
+    def __str__(self):
+        return self.question
+
 
 class Choice(models.Model):
     choice = models.TextField(max_length=1000, null=False, blank=False,
@@ -13,5 +16,8 @@ class Choice(models.Model):
     poll = models.ForeignKey('mainapp.Poll', on_delete=models.CASCADE,
                              related_name='choices', verbose_name='Опрос',
                              null=False, blank=False)
+
+    def __str__(self):
+        return self.choice
 
 
