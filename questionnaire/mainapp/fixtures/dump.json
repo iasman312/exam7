@@ -32,6 +32,22 @@
   }
 },
 {
+  "model": "mainapp.poll",
+  "pk": 6,
+  "fields": {
+    "question": "Что Вы делаете в выходные дни?",
+    "created_at": "2021-04-03T10:59:04.153Z"
+  }
+},
+{
+  "model": "mainapp.poll",
+  "pk": 7,
+  "fields": {
+    "question": "Сколько Вы весите?",
+    "created_at": "2021-04-03T11:00:10.445Z"
+  }
+},
+{
   "model": "mainapp.choice",
   "pk": 1,
   "fields": {
@@ -45,62 +61,6 @@
   "fields": {
     "choice": "Собака",
     "poll": 1
-  }
-},
-{
-  "model": "mainapp.choice",
-  "pk": 3,
-  "fields": {
-    "choice": "Попугай",
-    "poll": 1
-  }
-},
-{
-  "model": "mainapp.choice",
-  "pk": 4,
-  "fields": {
-    "choice": "Зайчик",
-    "poll": 1
-  }
-},
-{
-  "model": "mainapp.choice",
-  "pk": 5,
-  "fields": {
-    "choice": "10000-20000",
-    "poll": 2
-  }
-},
-{
-  "model": "mainapp.choice",
-  "pk": 6,
-  "fields": {
-    "choice": "20000-30000",
-    "poll": 2
-  }
-},
-{
-  "model": "mainapp.choice",
-  "pk": 7,
-  "fields": {
-    "choice": "30000-40000",
-    "poll": 2
-  }
-},
-{
-  "model": "mainapp.choice",
-  "pk": 8,
-  "fields": {
-    "choice": "40000-50000",
-    "poll": 2
-  }
-},
-{
-  "model": "mainapp.choice",
-  "pk": 9,
-  "fields": {
-    "choice": "7-14",
-    "poll": 3
   }
 },
 {
@@ -157,6 +117,119 @@
   "fields": {
     "choice": "Приколист",
     "poll": 4
+  }
+},
+{
+  "model": "mainapp.choice",
+  "pk": 18,
+  "fields": {
+    "choice": "7-14",
+    "poll": 3
+  }
+},
+{
+  "model": "mainapp.choice",
+  "pk": 19,
+  "fields": {
+    "choice": "10000-20000",
+    "poll": 2
+  }
+},
+{
+  "model": "mainapp.choice",
+  "pk": 20,
+  "fields": {
+    "choice": "30000-40000",
+    "poll": 2
+  }
+},
+{
+  "model": "mainapp.choice",
+  "pk": 21,
+  "fields": {
+    "choice": "40000-50000",
+    "poll": 2
+  }
+},
+{
+  "model": "mainapp.choice",
+  "pk": 22,
+  "fields": {
+    "choice": "50000-60000",
+    "poll": 2
+  }
+},
+{
+  "model": "mainapp.choice",
+  "pk": 23,
+  "fields": {
+    "choice": "Гуляю",
+    "poll": 6
+  }
+},
+{
+  "model": "mainapp.choice",
+  "pk": 24,
+  "fields": {
+    "choice": "Сплю",
+    "poll": 6
+  }
+},
+{
+  "model": "mainapp.choice",
+  "pk": 25,
+  "fields": {
+    "choice": "Смотрю телевизор",
+    "poll": 6
+  }
+},
+{
+  "model": "mainapp.choice",
+  "pk": 26,
+  "fields": {
+    "choice": "Читаю книгу",
+    "poll": 6
+  }
+},
+{
+  "model": "mainapp.choice",
+  "pk": 27,
+  "fields": {
+    "choice": "40-50",
+    "poll": 7
+  }
+},
+{
+  "model": "mainapp.choice",
+  "pk": 28,
+  "fields": {
+    "choice": "50-60",
+    "poll": 7
+  }
+},
+{
+  "model": "mainapp.choice",
+  "pk": 29,
+  "fields": {
+    "choice": "60-80",
+    "poll": 7
+  }
+},
+{
+  "model": "mainapp.choice",
+  "pk": 30,
+  "fields": {
+    "choice": "80+",
+    "poll": 7
+  }
+},
+{
+  "model": "mainapp.answer",
+  "pk": 1,
+  "fields": {
+    "poll": 4,
+    "choice": 14,
+    "created_at": "2021-04-03T10:52:36.522Z"
   }
 },
 {
